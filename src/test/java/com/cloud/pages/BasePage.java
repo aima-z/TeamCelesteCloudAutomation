@@ -16,52 +16,52 @@ public class BasePage {
             PageFactory.initElements(Driver.getDriver(), this);
         }
 
-        @FindBy(xpath = "//li[@data-id='dashboard']")
+        @FindBy(xpath = "(//a[@aria-label='Dashboard'])[1]")
         public WebElement DashboardIcon;
 
-        @FindBy(xpath = "//li[@data-id='files']")
+        @FindBy(xpath = "(//a[@aria-label='Files'])[1]")
         public WebElement FilesIcon;
 
-        @FindBy(xpath = "//li[@data-id='photos']")
+        @FindBy(xpath = "(//a[@aria-label='Photos'])[1]")
         public WebElement PhotosIcon;
 
-        @FindBy(xpath = "//li[@data-id='activity']")
+        @FindBy(xpath = "(//a[@aria-label='Activity'])[1]")
         public WebElement ActivityIcon;
 
-        @FindBy(xpath = "//li[@data-id='spreed']")
+        @FindBy(xpath = "(//a[@aria-label='Talk'])[1]")
         public WebElement TalkIcon;
 
-        @FindBy(xpath = "//")
+        @FindBy(xpath = "(//a[@aria-label='Mail'])[1]")
         public WebElement MailIcon;
 
-        @FindBy(xpath = "//")
+        @FindBy(xpath = "(//a[@aria-label='Contacts'])[1]")
         public WebElement ContactsIcon;
 
-        @FindBy(xpath = "//")
+        @FindBy(xpath = "(//a[@aria-label='Circles'])[1]")
         public WebElement CirclesIcon;
 
-        @FindBy(xpath = "//")
+        @FindBy(xpath = "(//a[@aria-label='Calendar'])[1]")
         public WebElement CalendarIcon;
 
-        @FindBy(xpath = "//")
+        @FindBy(xpath = "(//a[@aria-label='Notes'])[1]")
         public WebElement NotesIcon;
 
-        @FindBy(xpath = "//")
+        @FindBy(xpath = "(//a[@aria-label='Deck'])[1]")
         public WebElement DeckIcon;
 
-        @FindBy(xpath = "//")
+        @FindBy(xpath = "(//a[@aria-label='Tasks'])[1]")
         public WebElement TasksIcon;
 
-        @FindBy(xpath = "//")
+        @FindBy(xpath = "(//a[@href='#'])[2]")
         public WebElement SearchIcon;
 
-        @FindBy(xpath = "//")
+        @FindBy(xpath = "//div[@aria-label='Notifications']")
         public WebElement NotificationsIcon;
 
-        @FindBy(xpath = "//")
+        @FindBy(xpath = "//div[@aria-controls='contactsmenu-menu']")
         public WebElement CornerContactsIcon;
 
-        @FindBy(xpath = "//")
+        @FindBy(xpath = "//div[@aria-controls='expanddiv']")
         public WebElement AccountIcon;
     }
 
