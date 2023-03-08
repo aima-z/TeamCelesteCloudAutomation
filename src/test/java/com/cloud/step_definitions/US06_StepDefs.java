@@ -12,13 +12,15 @@ import net.bytebuddy.asm.Advice;
 import org.junit.Assert;
 
 public class US06_StepDefs {
+    LoginPage loginPage=new LoginPage();
     BasePage basePage=new BasePage();
     FilesModulePage_OG filesModulePageOg=new FilesModulePage_OG();
+
 
     @Given("user on the dashboard page")
     public void user_on_the_dashboard_page() {
         Driver.getDriver().get("https://qa.symund.com/");
-        LoginPage loginPage=new LoginPage();
+
         String username= ConfigurationReader.getProperty("usernameOlga");
         String password= ConfigurationReader.getProperty("passwordOlga");
         loginPage.login(username,password);
