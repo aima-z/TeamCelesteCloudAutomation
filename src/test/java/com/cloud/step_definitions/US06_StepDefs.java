@@ -28,9 +28,10 @@ public class US06_StepDefs {
 
     }
     @When("the user clicks the {string} module")
-    public void the_user_clicks_the_module(String string) {
+    public void the_user_clicks_the_module(String string) throws InterruptedException {
 
         basePage.FilesIcon.click();
+        Thread.sleep(10);
 
     }
     @When("the users click action-icon from any file on the page to remove")
