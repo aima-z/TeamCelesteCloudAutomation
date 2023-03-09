@@ -18,9 +18,20 @@ public class FilesModulePage_OG {
     @FindBy(xpath = "//span[.='Remove from favorites']")
     public WebElement removeButton;
 
-
-    @FindBy(xpath = "//span[.='Not favorited']")
+    @FindBy(xpath = "//span[@class='icon icon-star']")
     public WebElement notFav;
+
+    // @FindBy(xpath = "//span[@class='icon icon-starred']")
+    //public WebElement fav;
+
+    /*@FindBy(xpath = "(//span[@class='hidden-visually'])[6]")
+    public WebElement hidden;*/
+
+    /*@FindBy(xpath = "//span[.='Not favorited']")
+    public WebElement notFav;*/
+    //span[@class='icon icon-starred']
+    //span[@class='icon icon-star']
+    //div[@class='favorite-mark permanent']
 
 
 

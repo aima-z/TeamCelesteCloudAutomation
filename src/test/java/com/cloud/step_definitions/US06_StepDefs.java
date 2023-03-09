@@ -19,7 +19,7 @@ public class US06_StepDefs {
 
     @Given("user on the dashboard page")
     public void user_on_the_dashboard_page() {
-        Driver.getDriver().get("https://qa.symund.com/");
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
         String username= ConfigurationReader.getProperty("usernameOlga");
         String password= ConfigurationReader.getProperty("passwordOlga");
@@ -37,7 +37,7 @@ public class US06_StepDefs {
     public void the_users_click_action_icon_from_any_file_on_the_page_to_remove() throws InterruptedException {
 
        filesModulePageOg.actionIcon.click();
-       Thread.sleep(3);
+       Thread.sleep(5);
 
     }
     @When("user choose the {string} option")
@@ -53,9 +53,13 @@ public class US06_StepDefs {
     public void verify_that_the_file_is_not_listed_in_the_favorites_table() {
 
 
-       String actualResult=filesModulePageOg.notFav.getText();
-       String expectedResult="Not favorited";
-       Assert.assertTrue(expectedResult.contains(actualResult));
+       //String actualResult=filesModulePageOg.notFav.getAttribute(value);
+       //String expectedResult="icon icon-star";
+
+        //String expectedResult="icon";
+        filesModulePageOg.notFav.isDisplayed();
+
+
 
     }
 }

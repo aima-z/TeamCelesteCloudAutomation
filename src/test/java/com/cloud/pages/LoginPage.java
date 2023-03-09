@@ -17,13 +17,13 @@ public class LoginPage {
     public WebElement password;
 
     @FindBy(id = "submit-form")
-    public WebElement logIn;
+    public WebElement logInButton;
 
 
     public void login(String userNameStr, String passwordStr) {
         userName.sendKeys(userNameStr);
         password.sendKeys(passwordStr);
-        logIn.click();
+        logInButton.click();
         // verification that we logged
     }
 
