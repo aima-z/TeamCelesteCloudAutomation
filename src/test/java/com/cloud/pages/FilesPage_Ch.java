@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class FilesPage {
-    public FilesPage() {
+public class FilesPage_Ch {
+    public FilesPage_Ch() {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -14,7 +14,7 @@ public class FilesPage {
     public WebElement talkFolderFav;
 
     @FindBy(xpath = "//a[.='Favorites']")
-    public WebElement favoritesSubModule;
+    public WebElement favoritesSubModuleBtn;
 
     @FindBy(xpath = "//a[@href='/index.php/apps/files?dir=//Talk']//a[@class='action action-menu permanent']")
     public WebElement actionBtn;
@@ -26,7 +26,7 @@ public class FilesPage {
     public WebElement newFolderIcon;
 
     @FindBy (xpath = "//a[@data-templatename='New folder']")
-    public WebElement addNewFolder;
+    public WebElement addNewFolderBtn;
 
     @FindBy (id = "view12-input-folder")
     public WebElement inputName;
@@ -34,7 +34,6 @@ public class FilesPage {
     @FindBy (xpath = "//input[@class='icon-confirm']")
     public WebElement submitBtn;
 
-    @FindBy (xpath = "//a[@href='/index.php/apps/files?dir=//AnyName']//span[@class='innernametext']")
-    public WebElement newFolder;
-////tr[@data-file='Hello']
+
+
 }

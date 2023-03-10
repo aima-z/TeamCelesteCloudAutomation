@@ -1,7 +1,7 @@
 package com.cloud.step_definitions;
 
 import com.cloud.pages.BasePage;
-import com.cloud.pages.FilesPage;
+import com.cloud.pages.FilesPage_Ch;
 import com.cloud.pages.LoginPage;
 import com.cloud.utilities.ConfigurationReader;
 import com.cloud.utilities.Driver;
@@ -9,10 +9,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class US08_StepDefs extends BasePage {
     LoginPage loginPage = new LoginPage();
-    FilesPage filesPage = new FilesPage();
+    FilesPage_Ch filesPage = new FilesPage_Ch();
     String newFolderName = ConfigurationReader.getProperty("folderName");
 
     @Given("user on the dashboard page")
@@ -28,14 +32,10 @@ public class US08_StepDefs extends BasePage {
         filesPage.newFolderIcon.click();
     }
 
-    @When("the user clicks the {string} module")
-    public void the_user_clicks_the_module(String string) {
-        FilesIcon.click();
-    }
 
     @When("user click {string}")
     public void user_click_new_folder(String arg) {
-        filesPage.addNewFolder.click();
+        filesPage.addNewFolderBtn.click();
     }
 
     @When("user write a folder name")
@@ -50,9 +50,24 @@ public class US08_StepDefs extends BasePage {
 
     @Then("Verify the folder is displayed on the page")
     public void verify_the_folder_is_displayed_on_the_page() {
-        String expectedName = newFolderName;
-        String actualName = filesPage.newFolder.getText();
-        Assert.assertTrue(actualName.contains(expectedName));
+
+        Driver.getDriver().navigate().refresh();
+        boolean isCreated = false;
+
+        List<WebElement> folderDirectory = Driver.getDriver().findElements(By.xpath("//tbody[@id='fileList']//span[@class='nametext']"));
+
+        for (WebElement element : folderDirectory) {
+
+            if (element.getText().contains(newFolderName)) {
+                isCreated = true;
+                System.out.println("New folder is displayed");
+            }
+
+        }
+
+        Assert.assertTrue("Directory does not contain new folder ", isCreated);
+
+
     }
 
 
