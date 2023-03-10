@@ -60,8 +60,10 @@ public class US04_StepDefs extends BasePage {
     public void user_click_the_top_left_checkbox_of_the_table() {
 
         WebElement checkBox = Driver.getDriver().findElement(By.xpath("//label[@for='select_all_files']"));
+        BrowserUtils.sleep(5);
         checkBox.click();
-       // System.out.println("After clicking checkBox.isSelected = ," + checkBox.isSelected());
+
+
 
     }
 
@@ -69,10 +71,22 @@ public class US04_StepDefs extends BasePage {
     @Then("verify all the files are selected")
     public void verify_all_the_files_are_selected() {
 
-     //   WebElement checkBox = Driver.getDriver().findElement(By.xpath("//label[@for='select_all_files']"));
-        WebElement checkBox1 = Driver.getDriver().findElement(By.xpath("//label[@for='select-files-61588']"));
-      WebElement checkBox2 = Driver.getDriver().findElement(By.xpath("//label[@for='select-files-61583']"));
-      WebElement checkBox3 = Driver.getDriver().findElement(By.xpath("//label[@for='select-files-65148']"));
+        WebElement checkBox = Driver.getDriver().findElement(By.xpath("//label[@for='select_all_files']"));
+      //  WebElement checkBox1 = Driver.getDriver().findElement(By.xpath("//label[@for='select-files-61588']"));
+       // WebElement checkBox2 = Driver.getDriver().findElement(By.xpath("//label[@for='select-files-61583']"));
+       // WebElement checkBox3 = Driver.getDriver().findElement(By.xpath("//label[@for='select-files-65148']"));
+
+
+
+     //  Assert.assertTrue(checkBox.isSelected());
+
+        }
+
+
+
+
+
+
 
 
        // Assert.assertTrue(checkBox.isSelected());
@@ -93,7 +107,7 @@ public class US04_StepDefs extends BasePage {
 
 
 
-}
+
 
 
 
