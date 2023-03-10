@@ -10,7 +10,6 @@ public class LoginPage {
     public LoginPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
     @FindBy(id="user")
     public WebElement userName;
 
@@ -18,14 +17,13 @@ public class LoginPage {
     public WebElement password;
 
     @FindBy(id = "submit-form")
-    public WebElement submit;
+    public WebElement logInButton;
 
 
     public void login(String userNameStr, String passwordStr) {
-        LoginPage loginPage=new LoginPage();
         userName.sendKeys(userNameStr);
         password.sendKeys(passwordStr);
-        submit.click();
+        logInButton.click();
         // verification that we logged
     }
 
