@@ -1,7 +1,7 @@
 package com.cloud.step_definitions;
 
 import com.cloud.pages.BasePage;
-import com.cloud.pages.FilesPage;
+import com.cloud.pages.FilesPage_Ch;
 import com.cloud.pages.LoginPage;
 import com.cloud.utilities.BrowserUtils;
 import com.cloud.utilities.ConfigurationReader;
@@ -10,12 +10,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 public class US05_StepDefs extends BasePage {
     LoginPage loginPage = new LoginPage();
-    FilesPage filesPage = new FilesPage();
+    FilesPage_Ch filesPage = new FilesPage_Ch();
 
     @Given("user on the home page")
     public void user_on_the_home_page() {
@@ -45,7 +43,7 @@ public class US05_StepDefs extends BasePage {
 
     @When("user click the {string} sub-module on the left side")
     public void user_click_the_sub_module_on_the_left_side(String string) {
-        filesPage.favoritesSubModule.click();
+        filesPage.favoritesSubModuleBtn.click();
         BrowserUtils.sleep(3);
     }
 
