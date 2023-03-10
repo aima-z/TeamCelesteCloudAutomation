@@ -32,7 +32,7 @@ public class US04_StepDefs extends BasePage {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         loginPage.userName.sendKeys(ConfigurationReader.getProperty("username"));
         loginPage.password.sendKeys(ConfigurationReader.getProperty("password"));
-        loginPage.submit.click();
+        loginPage.loginButton.click();
 
     }
 
