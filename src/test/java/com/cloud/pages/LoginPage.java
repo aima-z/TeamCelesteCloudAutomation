@@ -13,20 +13,22 @@ public class LoginPage {
         
         PageFactory.initElements(Driver.getDriver(), this);
     }
-    
+
     @FindBy(id="user")
     public WebElement userName;
-    
+
     @FindBy(id="password")
     public WebElement password;
 
     @FindBy(id = "submit-form")
-    public WebElement submit;
+
+    public WebElement logInButton;
+
 
     public void login(String userNameStr, String passwordStr) {
         userName.sendKeys(userNameStr);
         password.sendKeys(passwordStr);
-        submit.click();
+        logInButton.click();
         // verification that we logged
 
 

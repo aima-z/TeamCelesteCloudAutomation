@@ -43,7 +43,9 @@ public class Driver {
             switch (browserType){
                 case "chrome":
                     //WebDriverManager.chromedriver().setup();
-                    ChromeOptions options = new ChromeOptions();//  new solution to fix error 403 yest forbidden
+
+                    ChromeOptions options=new ChromeOptions();
+
                     options.addArguments("--remote-allow-origins=*");
                     driverPool.set(new ChromeDriver(options));
                     driverPool.get().manage().window().maximize();
