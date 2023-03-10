@@ -23,7 +23,7 @@ public class FilesPage1 {
     public WebElement password;
 
     @FindBy(id = "submit-form")
-    public WebElement submit;
+    public WebElement loginButton;
 
 
     @FindBy(xpath = "(//a[@aria-label='Files'])[1]")
