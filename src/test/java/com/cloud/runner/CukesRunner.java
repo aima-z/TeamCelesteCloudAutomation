@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "com/cloud/step_definitions",
-        dryRun = true,
-        tags = "",
+        dryRun = false,
+        tags = "@MainModules",
         publish = false //generating a report with public link
 )
 public class CukesRunner {}
