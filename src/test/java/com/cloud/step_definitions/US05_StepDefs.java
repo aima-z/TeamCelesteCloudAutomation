@@ -29,6 +29,7 @@ public class US05_StepDefs extends BasePage {
         FilesIcon.click();
     }
 
+
     @When("the user clicks action-icon from any file on the page")
     public void the_user_clicks_action_icon_from_any_file_on_the_page() {
 
@@ -50,6 +51,6 @@ public class US05_StepDefs extends BasePage {
     @Then("Verify the chosen file is listed on the table")
     public void verify_the_chosen_file_is_listed_on_the_table() {
 
-      Assert.assertTrue(filesPage.talkFolderFav.isEnabled());
+        Assert.assertTrue(filesPage.talkFolderFav.isEnabled());
     }
 }
