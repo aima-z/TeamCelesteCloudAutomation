@@ -1,6 +1,6 @@
 Feature: As a user, I should be able to access to Files module - Favorites button
 
-@cholpon
+
   Scenario: Verify users to add files to Favorites
     Given user on the home page
     When the user clicks the Files module
