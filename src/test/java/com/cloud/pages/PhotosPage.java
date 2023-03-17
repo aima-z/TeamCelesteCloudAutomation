@@ -13,7 +13,7 @@ public class PhotosPage {
 
        @FindBy(xpath = "//ul[@class='app-navigation__list']")
 
-       public WebElement ListOfSubModules;
+       public WebElement listOfSubModules;
    }
 
 

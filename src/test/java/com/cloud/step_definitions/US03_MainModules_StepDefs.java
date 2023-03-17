@@ -12,7 +12,7 @@ import java.util.List;
 
 public class US03_MainModules_StepDefs {
 
-    LoginPage loginPage=new LoginPage();
+  LoginPage loginPage=new LoginPage();
     String username=ConfigurationReader.getProperty("username");
     String password=ConfigurationReader.getProperty("password");
 
@@ -42,5 +42,7 @@ public class US03_MainModules_StepDefs {
 
 
     }
+
+
 
 }
