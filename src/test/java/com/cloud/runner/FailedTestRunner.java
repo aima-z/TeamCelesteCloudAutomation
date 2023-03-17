@@ -9,5 +9,5 @@ import org.junit.runner.RunWith;
         features = "@target/rerun.txt",
         glue = "com/cloud/step_definitions"
 )
-public class FailedTestRunner {
+public class FailedTestRunner {//runs only failed tests
 }

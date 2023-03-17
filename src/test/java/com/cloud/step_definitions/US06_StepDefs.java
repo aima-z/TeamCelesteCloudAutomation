@@ -8,8 +8,6 @@ import com.cloud.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.bytebuddy.asm.Advice;
-import org.junit.Assert;
 
 public class US06_StepDefs {
     LoginPage loginPage=new LoginPage();
@@ -17,7 +15,7 @@ public class US06_StepDefs {
     FilesModulePage_OG filesModulePageOg=new FilesModulePage_OG();
 
 
-    @Given("user on the dashboard page")
+   @Given("user on the dashboard page")
     public void user_on_the_dashboard_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
@@ -27,8 +25,8 @@ public class US06_StepDefs {
 
 
     }
-    @When("the user clicks the {string} module")
-    public void the_user_clicks_the_module(String string) throws InterruptedException {
+    @When("the user clicks the Files module")
+    public void the_user_clicks_the_module() throws InterruptedException {
 
         basePage.FilesIcon.click();
         Thread.sleep(10);
@@ -63,4 +61,6 @@ public class US06_StepDefs {
 
 
     }
+
+
 }
