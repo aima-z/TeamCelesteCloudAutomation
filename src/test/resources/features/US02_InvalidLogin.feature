@@ -8,6 +8,6 @@ Feature: As a user, I should NOT be able to login with
     Then verify "<message>" message is displayed
     Examples:
       | username | password    | message                    |
-      | User9    | Wrong       | Wrong username or password |
-      | Wrong    | UserPass123 | Wrong username or password |
-      | Wrong    | Wrong       | Wrong username or password |
+      | User9    | Wrong       | Wrong username or password. |
+      | Wrong    | UserPass123 | Wrong username or password. |
+      | Wrong    | Wrong       | Wrong username or password. |
